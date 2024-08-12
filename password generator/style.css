@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #282847;
+    color: #282847;
+}
+
+main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.generator {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem 1rem;
+    background-color: #ebe6e6;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+input:not([type="checkbox"]),
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.password_warp {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.password_warp:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    height: 3px;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    background: linear-gradient(to right, #c62fa5cf 25%, #518cd4 75%);
+}
+
+.password_warp input {
+    flex: 1 1 0%;
+    padding: 0.55rem;
+    color: #222281;
+}
+
+.password_warp input::placeholder {
+    color: rgb(21, 54, 72);
+    font-style: italic;
+}
+
+.password_warp button {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #ae146ebb 7%, #2f5687 75%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent; 
+}
+
+label { 
+    display: block; 
+    user-select: none;
+    margin-bottom: 1rem;
+    block-size: 100%;
+}
+
+label span {
+    display: block;
+    flex: 1 1 0%;
+    white-space: nowrap;
+}
+
+label input[type="number"] {
+    text-align: right;
+}
+
+
+button[type="submit"] {
+    cursor: pointer;
+    padding: 0.5rem 5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, rgba(151, 67, 126, 0.583) 24%, rgba(53, 178, 134, 0.886) 75%);
+    background-size: 200%;
+    background-position: 25%;
+    transition: 0.2s ease-out;
+}
+
+button[type="submit"]:hover {
+    background-position: 75%;
+}
